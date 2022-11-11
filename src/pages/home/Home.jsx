@@ -25,14 +25,12 @@ export const Home = () => {
   };
 
   return (
-    <>
-      <main>
-        <h1>Home</h1>
-        <h3>Welcome { user.displayName? user.displayName : user.email }</h3>
-        <button onClick={ () => signingOut() }>
-          Sign Out
-        </button>
-      </main>
-    </>
+    <main>
+      <h1>Home</h1>
+      <h3>Welcome { user.displayName? user.displayName : user.email }</h3>
+      <button onClick={ () => signingOut() }>
+        Sign Out
+      </button>
+    </main>
   );
 };
