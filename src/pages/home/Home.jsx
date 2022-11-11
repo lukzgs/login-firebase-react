@@ -1,8 +1,6 @@
 import React, { useContext, useEffect } from 'react';
-import { Navigate } from 'react-router-dom';
 import { Context } from '../../context/context';
-import { auth } from '../../services/firebase';
-import { signOut } from 'firebase/auth';
+import { Navbar } from '../../components/navbar/Navbar';
 
 export const Home = () => {
   const { user, setUser } = useContext(Context);
@@ -17,20 +15,13 @@ export const Home = () => {
     storageContent();
   }, []);
 
-  const signingOut = () => {
-    signOut(auth);
-    localStorage.clear();
-    setUser(null);
-    return <Navigate to='/' />;
-  };
-
   return (
-    <main>
+    <>
+    <Navbar />
+    <main className='w-screen h-screen'>
       <h1>Home</h1>
       <h3>Welcome { user.displayName? user.displayName : user.email }</h3>
-      <button onClick={ () => signingOut() }>
-        Sign Out
-      </button>
     </main>
+    </>
   );
 };
