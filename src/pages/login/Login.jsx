@@ -136,27 +136,25 @@ export const Login = () => {
   };
 
   return (
-    <div 
-      className='login-page flex justify-center h-screen w-screen bg-gradient-to-r from-stone-50 to-gray-900'>
-      <div className="login-landpage">
+    <div className='login-page flex justify-center h-screen w-screen bg-gradient-to-r from-stone-50 to-gray-900'>
+      <div className='login-landpage'>
         <div
-          className="text-center mt-24"
           id='title'
-        >
-          <div className="flex items-center justify-center">
-            <svg fill="none" viewBox="0 0 24 24" className="w-12 h-12 text-blue-500" stroke="currentColor">
-              <path strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          className='text-center mt-24'>
+          <div className='flex items-center justify-center'>
+            <svg fill='none' viewBox='0 0 24 24' className='w-12 h-12 text-blue-500' stroke='currentColor'>
+              <path strokeLinejoin='round' strokeWidth='2' d='M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z'/>
             </svg>
           </div>
 
-          <h2 className="text-4xl tracking-tight">
+          <h2 className='text-4xl tracking-tight'>
             Sign in into your account
           </h2>
 
-          <span className="text-sm">
+          <span className='text-sm'>
             or
             <br/>
-            <Link to='/register' className="text-blue-500">
+            <Link to='/register' className='text-blue-300'>
               register a new account
             </Link>
           </span>
@@ -164,17 +162,14 @@ export const Login = () => {
 
         <div
           id='login-card'
-          className='max-w-xl rounded-lg shadow-md px-6 pt-12 pb-6 md:mx-0 mx-4 mt-16 bg-white'
-        >
+          className='max-w-xl rounded-lg shadow-md px-6 pt-12 pb-6 md:mx-0 mx-4 mt-16 bg-white'>
           <form
             id='login-form'
             className="w-full max-w-xl rounded-lg pr-6 pl-6"
-            onSubmit={ handleSubmit }
-          >
+            onSubmit={ handleSubmit }>
             <div
               id='form-and-login-btn'
-              className='flex flex-wrap -mx-3 -mb-3'
-            >
+              className='flex flex-wrap -mx-3 -mb-3'>
               <FormInput
                 name='email'
                 div={{
@@ -190,8 +185,7 @@ export const Login = () => {
                   className: 'appearance-none block w-full bg-white text-gray-900 font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none',
                   type: 'email',
                   // required: true
-                }}
-              />
+                }} />
 
               <FormInput
                 name='password'
@@ -208,12 +202,11 @@ export const Login = () => {
                   className: 'appearance-none block w-full bg-white text-gray-900 font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none',
                   type: 'password',
                   // required: true
-                }}
-              />
+                }} />
 
-              <div className="w-full flex items-center justify-between px-3 mb-3 ">
-                <label className="flex items-center w-1/2" />
-                <div className="w-1/2 text-right">
+              <div className='w-full flex items-center justify-between px-3 mb-3'>
+                <label className='flex items-center w-1/2'/>
+                <div className='w-1/2 text-right'>
                   <Link to='/forgot-password' className="text-blue-500 text-sm tracking-tight">
                       Forget your password?
                   </Link>
@@ -229,22 +222,19 @@ export const Login = () => {
                   id: 'btn-login',
                   className: 'appearance-none block w-full bg-blue-600 text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 leading-tight hover:shadow-md focus:outline-none focus:bg-white focus:border-gray-500 bg-gradient-to-r from-fuchsia-500 to-cyan-500',
                   description: 'Login'
-                }}
-              />
+                }} />
             </div>
           
             <div
               id='sign-in-with'
-              className="text-center flex-wrap"
-            >
-              <span className="text-center text-xs text-gray-700 ">or sign up with</span>
+              className='text-center flex-wrap'>
+              <span className='text-center text-xs text-gray-700'>or sign up with</span>
             </div>
           </form>
         
           <div
             id='sign-in-btns'
-            className="flex items-center w-full -mt-2"
-          >
+            className='flex items-center w-full -mt-2'>
             <GenericButton
               div={{
                 id: 'google',

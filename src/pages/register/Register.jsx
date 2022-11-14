@@ -3,7 +3,6 @@ import { Navigate } from 'react-router-dom';
 import { Context } from '../../context/context';
 import { auth, db } from '../../services/firebase';
 
-import debounce from 'lodash.debounce';
 import { 
   addDoc, setDoc, getDoc, getDocs,
   collection, onSnapshot, serverTimestamp 
@@ -14,7 +13,9 @@ import {
 } from 'firebase/auth'; 
 import { FormInput } from '../../components/formInput/FormInput';
 import { GenericButton } from '../../components/btns/GenericButton';
-import { Error } from '../../services/errors/Errors';
+import { HandleError } from '../../services/errors/Errors';
+
+import debounce from 'lodash.debounce';
 
 
 export const Register = () => {
